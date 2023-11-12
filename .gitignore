@@ -1,0 +1,14 @@
+*.aux
+*.gz
+*.snm
+*.toc
+*.log
+*.fdb_latexmk
+*.fls
+*.nav
+*.out
+*.gz
+*.ilg
+*.idx
+*.idn
+*.ind
