@@ -37,6 +37,7 @@
 \DeclareMathOperator{\im}{im}
 \DeclareMathOperator{\ann}{Ann}
 \DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\vol}{vol}
 
 \newcommand{\vv}{\vspace{0.3cm}}
 
@@ -425,8 +426,8 @@
 	\begin{align*}
 		\left\langle \raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/trifoilrightkaff.png}} \right\rangle & = A\left\langle \raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/trifoilrightkaff1.png}} \right\rangle +A^{-1} \left\langle \raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/trifoilrightkaff2.png}} \right\rangle \\
 		                                                                                                     & = A(-A^4-A^{-4})+A^{-1} (-A^{-3})^2 =A^{-7}-A^{-3}-A^{5}                                                                                                                                                               \\
-		w(\raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/trifoilrightkaff.png}})                         & =3                                                                                                                                                                                                                     \\
-		V(\raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/trifoilrightkaff.png}})                         & = \left(-A^{16}+A^{12}+A^4\right)_{t^{1/2}=A^{-2}} = -t^{-4}+t^{-3}+t^{-1}
+		w(\raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/righttrefoil.png}})                         & =3                                                                                                                                                                                                                     \\
+		V(\raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/righttrefoil.png}})                         & = \left(-A^{16}+A^{12}+A^4\right)_{t^{1/2}=A^{-2}} = -t^{-4}+t^{-3}+t^{-1}
 	\end{align*}
 
 
@@ -545,7 +546,7 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Yet More Approaches}
+	\frametitle{Yet Another Approach}
 
 
 \end{frame}
@@ -553,28 +554,60 @@
 \begin{frame}
 	\frametitle{Conjecture}
 
+	Facts:
+	\begin{itemize}
+		\item There are nontrivial knots $K_1\not=K_2$ with $V(K_1)=V(K_2)$.
+		\item There are links with the same Jones polynomial as unlinks.
+	\end{itemize}
 
+	\begin{block}{Conjecture}
+		The only knot with Jones polynomial $V(K)=1$ is the unknot.
+	\end{block}
 
+	The conjecture has been confirmed for several families of knots, including alternating and adequate knots, knots up to 18 crossings.
 \end{frame}
 
 
 \begin{frame}
 	\frametitle{Coloured Jones Polynomials}
 
-	Whatever ite means
+		None of the three methods discussed in this talk was Jones' original approach, whose original formulation of his polynomial came from his study of operator algebras. His work is generalized to vase families of invariants, called quantum invariants.
 
+		\begin{itemize}
+			\item The coloured Jones polynomials is a infinite sequence of Laurent polynomials $\{J_{K,n}(t)\}_n$, encoding the Jones polynomial of $K$ and these of the links $K^s$ that are the \emph{parallels} of $K$.
+			\item Formulae for $J_{K,n}(t)$ come from representation theory of $SU(2)$ by decomposition of tensor product of representations.
+			\item $J_{K,n}(t)$ can be calculated from any knot diagram via processes such as skein theory, state sums, $R$-matrices, and ...
+		\end{itemize}
 
+\end{frame}
+
+\begin{frame}
+	\frametitle{Coloured Jones Polynomials}
+
+		Fot this talk:
+
+		\begin{itemize}
+			\item  $J_{K,1}(t)=1$,
+			\item  $J_{K,2}(t)=V(K)$ - original Jones polynomial,
+			\item  $J_{K,3}(t)=V(K^2)-1$,
+			\item  $J_{K,4}(t)=V(K^3)-2V(K)$,
+			\item ...
+		\end{itemize}
+		\begin{figure}
+			\includegraphics[width=2cm]{pic/fig8.png}
+			\hspace{0.5cm}
+			\includegraphics[width=2cm]{pic/fig83.png}
+			\caption{Figure-8 knot and its parallels}
+		\end{figure}
 
 \end{frame}
 
 \begin{frame}
 	\frametitle{Conjectures}
 
-	AJ Conjecture
-
-	Volume Conjecture
-
-
+	\begin{block}{Volume Conjecture}
+		Let $K$ be a hyperbolic knot. Then \[\vol(K)=\lim_{N\to\infty}\frac{2\pi \log |\langle K\rangle_N |}{N},\] where \[\langle K\rangle_N=\lim_{q\to e^{2\pi i/N}} \frac{J_{K,N} (q)}{J_{\mbox{unknot},N}}(q).\]
+	\end{block}
 
 \end{frame}
 
