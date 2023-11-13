@@ -30,8 +30,6 @@
 
 
 
-
-
 \DeclarePairedDelimiter\ceil{\lceil}{\rceil}
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 
@@ -212,13 +210,13 @@
 	\end{block}
 
 	\begin{block}{Unkotting Problem}
-		Given a knot (diagrams), determining whether it is the unknot.
+		Given a knot (diagram), determining whether it is the unknot.
 	\end{block}
 
 	{\small{\begin{itemize}
 			\item Both problems are NP.
 			\item $n=$ the sum of crossing numbers of two diagrams; an upper bound on the number of Reidemeister moves is $2^{2^{2^{\dots^n}}}$, where where the height of the tower of $2$s is $10^{1,000,000n}$ (Coward \& Lackenby 2014).
-			\item $c=$ the sum of crossing numbers of a knot diagram; an upper bound on the number on the number of Reidemeister moves required to arrive at the standard unknot is $(236c)^{11}$ (Lackenby 2015).
+			\item $c=$ the sum of crossing numbers of an unknot diagram; an upper bound on the number of Reidemeister moves required to arrive at the standard unknot is $(236c)^{11}$ (Lackenby 2015).
 		\end{itemize}}}
 \end{frame}
 
@@ -310,14 +308,18 @@
 
 \begin{frame}
 	\frametitle{Kauffman Bracket: Examples}
-	$\left\langle\KPUNLINK\right\rangle=(-A^{2}-A^{-2})\left\langle\KPA\right\rangle=-A^2-A^{-2}$
-	\newline
-	\vv
+	\begin{align*}
+		\left\langle\KPUNLINK\right\rangle &= (-A^{2}-A^{-2})\left\langle\KPA\right\rangle\\
+		&=-A^2-A^{-2}\\
+		& \\
+		\left\langle {a} \right\rangle &= b\\
+		&=
+	\end{align*}
 	So it does \emph{not} respect Reidemeister moves of Type I.
 \end{frame}
 
 \begin{frame}
-	\frametitle{Writhe of a Knot/Link}
+	\frametitle{Writhe}f a Knot/Link
 
 	Mirror
 
