@@ -145,12 +145,11 @@
 	\frametitle{Knot Equivalence}
 	Two knots are \emph{equivalent} if one knot can be pushed about smoothly, without intersecting itself, to coincide with another knot.
 
-	% \begin{figure}
-	%  \centering
-	%  \animategraphics[loop,controls,width=4cm]{10}{pic/Knot_Unfolding-}{0}{50}
-	%  \caption{Deformation to an unknot}
-	% \end{figure}
-
+	\begin{figure}
+		\centering
+		\animategraphics[loop,controls,width=3.5cm]{10}{pic/Knot_Unfolding-}{0}{50}
+		\caption{Deformation to an unknot}
+	\end{figure}
 
 	\begin{center}
 		unknot = the boundary of a simplicial disk
@@ -184,6 +183,12 @@
 
 \begin{frame}
 	\frametitle{Reidemeister Moves}
+
+	\begin{figure}
+		\centering
+		\includegraphics[width=10cm]{pic/rmseq.png}
+	\end{figure}
+	\p
 	\begin{block}{Remark}
 		The following moves can be seen (exercise) to be consequences of the three types of Reidemeister move.
 	\end{block}
@@ -196,9 +201,9 @@
 	% 	\includegraphics[width=0.24\textwidth]{pic/type31.png}
 	% 	\caption{Not Reidemeister moves, but their consequences}
 	% \end{figure}
+	% \end{figure}
 	\begin{itemize}
-		\item \RIa[yscale=-1]\myarrow\RIb
-		\item \RIIc\myarrow\RIIb
+		\item \RIa[yscale=-1]\myarrow\RIb \ ; \quad \RIIc\myarrow\RIIb
 		\item \RIIIa[xscale=-1]\myarrow\RIIIa[xscale=-1, rotate=180]
 	\end{itemize}
 
@@ -218,6 +223,25 @@
 			\item $n=$ the sum of crossing numbers of two diagrams; an upper bound on the number of Reidemeister moves is $2^{2^{2^{\dots^n}}}$, where where the height of the tower of $2$s is $10^{1,000,000n}$ (Coward \& Lackenby 2014).
 			\item $c=$ the sum of crossing numbers of an unknot diagram; an upper bound on the number of Reidemeister moves required to arrive at the standard unknot is $(236c)^{11}$ (Lackenby 2015).
 		\end{itemize}}}
+\end{frame}
+
+\begin{frame}[c]
+	\frametitle{Unknotting Problem}
+	\begin{figure}[!htb]
+		\centering
+		\begin{minipage}{4cm}
+			\centering
+			\includegraphics[width=3cm]{pic/Ochiai_unknot.png}
+			\caption{One of Ochiai's unknot}
+		\end{minipage}
+		\begin{minipage}{4cm}
+			\centering
+			\includegraphics[width=3cm]{pic/Thistlethwaite_unknot.png}
+			\caption{Thistlethwaite unknot}
+		\end{minipage}
+	\end{figure}
+
+
 \end{frame}
 
 \begin{frame}[c]
@@ -246,22 +270,22 @@
 
 \end{frame}
 
-\begin{frame}
-	\frametitle{Knot Complements}
-	\small
-	\begin{theorem}[Gordon and Luecke 1989]
-		If $K_1$ and $K_2$ are unoriented knots in $S^3$ and there is an orientation preserving homeomorphism between their complements, then $K_1$ and $K_2$ are equivalent (as unoriented knots).
-	\end{theorem}
+% \begin{frame}
+% 	\frametitle{Knot Complements}
+% 	\small
+% 	\begin{theorem}[Gordon and Luecke 1989]
+% 		If $K_1$ and $K_2$ are unoriented knots in $S^3$ and there is an orientation preserving homeomorphism between their complements, then $K_1$ and $K_2$ are equivalent (as unoriented knots).
+% 	\end{theorem}
 
-	\begin{theorem}[Whitten 1987]
-		If $K_1$ and $K_2$ are prime knots in $S^3$ with isomorphic knot groups, then their complements are homeomorphic.
-	\end{theorem}
+% 	\begin{theorem}[Whitten 1987]
+% 		If $K_1$ and $K_2$ are prime knots in $S^3$ with isomorphic knot groups, then their complements are homeomorphic.
+% 	\end{theorem}
 
-	\begin{theorem}[Waldhausen 1966]
-		If there exists an isomorphism between two knot groups sending longitude to longitude and meridian to meridian, then these two knots are equivalent.
-	\end{theorem}
+% 	\begin{theorem}[Waldhausen 1966]
+% 		If there exists an isomorphism between two knot groups sending longitude to longitude and meridian to meridian, then these two knots are equivalent.
+% 	\end{theorem}
 
-\end{frame}
+% \end{frame}
 
 \begin{frame}
 	\frametitle{Diagrammatic Invariant}
@@ -292,10 +316,10 @@
 			%the first rule
 			\item[1.] $\left\langle\KPA\right\rangle=1$;
 
-			%the second rule
+				%the second rule
 			\item[2.] $\left\langle L \cup \KPA\right\rangle=(-A^{2}-A^{-2})\langle L\rangle$;
 
-			%the third rule
+				%the third rule
 			\item[3.] $\left\langle\KPB\right\rangle= A\left\langle\KPC\right\rangle + A^{-1} \left\langle \KPD \right\rangle$.
 		\end{enumerate}
 		Or if you tilt your head $\frac{\pi}{2}$,
@@ -307,29 +331,79 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Kauffman Bracket: Examples}
+	\frametitle{Kauffman Bracket}
 	\begin{align*}
-		\left\langle\KPUNLINK\right\rangle &= (-A^{2}-A^{-2})\left\langle\KPA\right\rangle\\
-		&=-A^2-A^{-2}\\
-		& \\
-		\left\langle {a} \right\rangle &= b\\
-		&=
+		\left\langle\KPUNLINK\right\rangle                                                      & = (-A^{2}-A^{-2})\left\langle\KPA\right\rangle                                                                                                                                                 \\
+		                                                                                        & =-A^2-A^{-2}                                                                                                                                                                                   \\
+		                                                                                        &                                                                                                                                                                                                \\
+		\left\langle \raisebox{-10pt}{\includegraphics[width=1cm]{pic/kbun1.png}} \right\rangle & = A   \left\langle \raisebox{-10pt}{\includegraphics[width=1cm]{pic/kbun2.png}} \right\rangle  + A^{-1}\left\langle \raisebox{-10pt}{\includegraphics[width=1cm]{pic/kbun3.png}} \right\rangle \\
+		                                                                                        & =A\cdot 1 + A^{-1}(-A^2-A^{-2})                                                                                                                                                                \\
+		                                                                                        & = -A^{-3}
 	\end{align*}
-	So it does \emph{not} respect Reidemeister moves of Type I.
+
+	{\small
+	\hspace*{-1cm}
+	\begin{tabular}{ l l }
+		Bad news:  & The Kauffman bracket does \emph{not} respect Reidemeister moves of Type I. \\
+		Good news: & The Kauffman bracket respects Reidemeister moves of Type II and III.
+	\end{tabular}
+	}
+
 \end{frame}
 
 \begin{frame}
-	\frametitle{Writhe}f a Knot/Link
+	\frametitle{Writhe}
+	\begin{block}{Oriented Link}
+		A link with a choice of orientation for each complement
+	\end{block}
+	\begin{Definition}
+		The writhe $w(D)$ of a diagram $D$ of an \emph{oriented} link is the sum of signs of the crossings of $D$, where each crossing has sign $+1$ or $-1$ according to the following:
+	\end{Definition}
 
-	Mirror
+	\begin{center}
+		\begin{tabular}{ c c }
+			+1:\raisebox{-10pt}{\includegraphics[width=1.5cm]{pic/lplus.png}} &
+			-1: \raisebox{-10pt}{\includegraphics[width=1.5cm]{pic/lmin.png}}
+		\end{tabular}
+	\end{center}
+
+\end{frame}
 
 
+\begin{frame}
+	\begin{block}{Property of Writhe}
+		The writhe $w(D)$ does not change if $D$ is changed under Reidemeister moves of type II or III; the writhe $w(D)$ does change by $+1$ or $-1$ if $D$ is changed under a Reidemeister move of type I. And the writhe of a knot diagram does \emph{not} depend on the choice of orientation.
+	\end{block}
 
+	For example:
+	\begin{align*}
+		w(\raisebox{-15pt}{\includegraphics[width=1.8cm]{pic/holflp.png}})  & =+2 \\ w(\raisebox{-15pt}{\includegraphics[width=1.8cm]{pic/holfpr.png}})&=-2\\
+		w(\raisebox{-15pt}{\includegraphics[width=1.4cm]{pic/trifoil.png}}) & =-3
+	\end{align*}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Jones Polynomial}
+	\begin{theorem}
+		Let $D$ be a diagram of an oriented link $L$. Then the expression \[(-A)^{-3w(D)}\langle D\rangle\] is an invariant of the oriented link $L$.
+	\end{theorem}
+
+	\begin{block}{Definition-Theorem}
+		The Jones polynomial $V(L)$ of an oriented link $L$ is the Laurent polynomial in $t^{1/2}$ with integral coefficients, defined by \[V(L)= \left( (-A)^{-3w(D)}\langle D\rangle \right)_{t^{1/2}=A^{-2}} \in \ZZ[t^{1/2},t^{-1/2}],\] where $D$ is any oriented diagram for $L$.
+	\end{block}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Hopf Link}
-
+	\begin{align*}
+		\left\langle \raisebox{-10pt}{\includegraphics[width=1.6cm]{pic/holflp.png}} \right\rangle & = A\left\langle \raisebox{-10pt}{\includegraphics[width=1.6cm]{pic/hopfunkot2.png}} \right\rangle +A^{-1} \left\langle \raisebox{-10pt}{\includegraphics[width=1.6cm]{pic/hopfunkot1.png}} \right\rangle \\
+		                                                                                           & = A(-A^3)+A^{-1} (-A^{-3}) =-A^4-A^{-4}                                                                                                                                                                  \\
+		w(\raisebox{-10pt}{\includegraphics[width=1.6cm]{pic/holflp.png}})                         & =2;\quad w(\raisebox{-10pt}{\includegraphics[width=1.6cm]{pic/holfpr.png}}) =-2
+		                                                                                           &                                                                                                                                                                                                          \\
+		V(\raisebox{-10pt}{\includegraphics[width=1.6cm]{pic/holflp.png}})                         & = \left(-A^{-2}-A^{-10}\right)_{t^{1/2}=A^{-2}} = -t^{1/2}-t^{5/2}                                                                                                                                       \\
+		V(\raisebox{-10pt}{\includegraphics[width=1.6cm]{pic/holfpr.png}})                         & = \left(-A^{10}-A^{2}\right)_{t^{1/2}=A^{-2}} = -t^{-5/2}-t^{-1/2}
+	\end{align*}
 
 
 \end{frame}
@@ -337,66 +411,141 @@
 \begin{frame}
 	\frametitle{Left Trefoil Knot}
 
-
+	\begin{align*}
+		\left\langle \raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/trifoilkaff.png}} \right\rangle & = A\left\langle \raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/trifoilkaff1.png}} \right\rangle +A^{-1} \left\langle \raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/trifoilkaff2.png}} \right\rangle \\
+		                                                                                                & = A(-A^3)^2+A^{-1} (-A^{-4}-A^4) =A^7-A^3-A^{-5}                                                                                                                                                             \\
+		w(\raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/trifoillskein.png}})                       & =-3                                                                                                                                                                                                          \\
+		V(\raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/trifoil.png}})                             & = \left(-A^{16}+A^{12}+A^4\right)_{t^{1/2}=A^{-2}} = -t^{-4}+t^{-3}+t^{-1}
+	\end{align*}
 
 \end{frame}
 
 \begin{frame}
 	\frametitle{Right Trefoil Knot}
-
+	\begin{align*}
+		\left\langle \raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/trifoilrightkaff.png}} \right\rangle & = A\left\langle \raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/trifoilrightkaff1.png}} \right\rangle +A^{-1} \left\langle \raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/trifoilrightkaff2.png}} \right\rangle \\
+		                                                                                                     & = A(-A^4-A^{-4})+A^{-1} (-A^{-3})^2 =A^{-7}-A^{-3}-A^{5}                                                                                                                                                               \\
+		w(\raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/trifoilrightkaff.png}})                         & =3                                                                                                                                                                                                                     \\
+		V(\raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/trifoilrightkaff.png}})                         & = \left(-A^{16}+A^{12}+A^4\right)_{t^{1/2}=A^{-2}} = -t^{-4}+t^{-3}+t^{-1}
+	\end{align*}
 
 
 \end{frame}
 
 \begin{frame}
-	\frametitle{Mirror Image}
+	\frametitle{Mirrow Image}
 
+	\begin{block}{Mirror Image}
+		Put a mirror aside a knot and the image of the knot is known as the mirror image of the knot, or mathematically, the knot obtained by a refection in a plane.
+	\end{block}
+	\begin{figure}
+		\centering
+		\includegraphics[width=6cm]{pic/The_two_trefoil_knots.png}
+		\caption{The left-handed and right-handed trefoil knots are not equivalent}
+	\end{figure}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Properties of Jones Polynomials}
 	\begin{theorem}
 		The Jones polynomial of the mirror image $\bar L$ of an oriented link $L$ is the conjugate under $t\leftrightarrow t^{-1}$ of the polynomial of $L$.
 	\end{theorem}
 	\p
 	\begin{proofs}
-		asd
+		The mirror image negates the writhe of any oriented diagram by exchange the positive and negative crossings. The mirror effect on the Kauffman bracket is that $A$ is replaced by $A^{-1}$.
 	\end{proofs}
 
-	Fail for palindromes
+	\begin{align*}
+		V(\mbox{left-handed trefoil knot})  & = -t^{-4}+t^{-3}+t^{-1} \\
+		V(\mbox{right-handed trefoil knot}) & = -t^{4}+t^{3}+t^{1}
+	\end{align*}
+
 \end{frame}
 
 \begin{frame}
 	\frametitle{Connected Sum}
 
-	% \begin{theorem}
-	%  The Jones polynomial of the mirror image $\bar L$ of an oriented link $L$ is the conjugate under $t\leftrightarrow t^{-1}$ of the polynomial of $L$.
-	% \end{theorem}
-	% \p
-	% \begin{proofs}
-	%  asd
-	% \end{proofs}
+	% \begin{block}{Connected sum of knots}
+	% 	To define the connected sum for two oriented knots:
+	% 	\begin{itemize}
+	% 		\item Consider a planar projection of each knot and suppose these projections are disjoint.
+	% 		\item Find a rectangle in the plane where one pair of sides are arcs along each knot but is otherwise disjoint from the knots and so that the arcs of the knots on the sides of the rectangle are oriented around the boundary of the rectangle in the same direction.
+	% 		\item Now join the two knots together by deleting these arcs from the knots and adding the arcs that form the other pair of sides of the rectangle.
+	% 	\end{itemize}
+	% \end{block}
+	Connected sum of (oriented) knots $K_1+K_2$:
 
-	Fail for palindromes
+	\begin{figure}
+		\centering
+		\includegraphics[width=4cm]{pic/Sum_of_knots.png}
+		\vfill
+		\includegraphics[width=4cm]{pic/Sum_of_knots2.png}
+		\vfill
+		\includegraphics[width=4cm]{pic/Sum_of_knots3.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Properties of Jones Polynomials}
+	\begin{theorem}
+		Let $K_1, K_2$ be two (oriented) knots. Then we have \[V(K_1+K_2)=V(K_1)V(K_2).\]
+	\end{theorem}
+	\begin{block}{Sketch of proof}
+		Consider a calculation if the polynomial of $K_1+K_2$ and operate firstly on the crossings of just one summand.
+	\end{block}
+
 \end{frame}
 
 
 \begin{frame}
 	\frametitle{Yet Another Approach}
 
-	Skein Relation
-
+	\begin{block}{Definiton-Theorem}
+		The Jones polynomial invariant is a function\[V:\{\mbox{Oritented links in }S^3\}\to \ZZ[t^{1/2}, t^{-1/2}]\] such that \begin{enumerate}[I.]
+			\item $V(\KPA)=1$
+			\item whenever three oriented links $L_+, L_-$ and $L_0$ are the same, except in the neighbourhood of a point where they are shown as in the next slide, then 
+			\[t^{-1}V(L_+)- tV(L_-)+(t^{-1/2}-t^{1/2})V(L_0)=0.\]
+		\end{enumerate}
+	\end{block}
 
 \end{frame}
 
 \begin{frame}
-	\frametitle{Yet Another Another Approach}
+	\frametitle{Skein Relation}
+	\[t^{-1}V(L_+)- tV(L_-)+(t^{-1/2}-t^{1/2})V(L_0)=0\]
+	\begin{center}
+		\begin{tabular}{ l  l l }
+			$L_+$: \raisebox{-10pt}{\includegraphics[width=1.5cm]{pic/lplus.png}}& $L_-$:\raisebox{-10pt}{\includegraphics[width=1.5cm]{pic/lmin.png}} & $L_0$:\raisebox{-10pt}{\includegraphics[width=1.5cm]{pic/l0.png}}
+		\end{tabular}
+	\end{center}
 
-	Skein Relation
+	\begin{block}{Skein Relation}
+		In general, a skein relationship requires three link diagrams that are identical except at one crossing. To recursively define a knot (link) polynomial, a function $F$ is fixed and for any triple of diagrams and their polynomials labelled as above, \[F(L_+,L_-,L_0)=0.\]
+	\end{block}
+	
+\end{frame}
+
+\begin{frame}[c]
+	\frametitle{Unlink}
+
+	\begin{center}
+		\begin{tabular}{ l  l l }
+			$L_+$: \raisebox{-10pt}{\includegraphics[width=2cm]{pic/unlinklp.png}}& $L_-$:\raisebox{-10pt}{\includegraphics[width=2cm]{pic/unlinklm.png}} & $L_0$:\raisebox{-10pt}{\includegraphics[width=2cm]{pic/unlinkl0.png}}
+		\end{tabular}
+	\end{center}
+	\[t^{-1}V(L_+)- tV(L_-)+(t^{-1/2}-t^{1/2})V(L_0)=0\]
+	But $L_+$ and $L_-$ are the unknot, so $V(L_+)=V(L_-)=1$.
+	\begin{align*}
+		V(L_0)&=-\frac{t^{-1}- t}{t^{-1/2}-t^{1/2}}\\
+		V(L_0)&=-t^{-1/2}-t^{1/2}
+	\end{align*}
 
 
 \end{frame}
 
 \begin{frame}
 	\frametitle{Yet More Approaches}
-
-	Skein Relation
 
 
 \end{frame}
