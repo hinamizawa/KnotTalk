@@ -28,6 +28,8 @@
 \usepackage{animate}
 \usetikzlibrary{shapes,snakes}
 
+\pgfplotsset{compat=1.18}
+
 
 
 \DeclarePairedDelimiter\ceil{\lceil}{\rceil}
@@ -609,7 +611,7 @@
 		The only knot with Jones polynomial $V(K)=1$ is the unknot.
 	\end{block}
 
-	The conjecture has been confirmed for several families of knots, including alternating and adequate knots, knots up to 18 crossings.
+	The conjecture has been confirmed for several families of knots, including alternating and adequate knots, and knots up to 18 crossings.
 \end{frame}
 
 
@@ -651,11 +653,9 @@
 	\frametitle{Conjectures}
 
 	\begin{block}{Volume Conjecture}
-		Let $K$ be a hyperbolic knot. Then \[\vol(K)=\lim_{N\to\infty}\frac{2\pi \log |\langle K\rangle_N |}{N},\] where \[\langle K\rangle_N=\lim_{q\to e^{2\pi i/N}} \frac{J_{K,N} (q)}{J_{\mbox{unknot},N}}(q).\]
+		Let $K$ be a hyperbolic knot. Then \[\vol(K)=\lim_{N\to\infty}\frac{2\pi \log |\langle K\rangle_N |}{N},\] where \[\langle K\rangle_N=\lim_{q\to e^{2\pi i/N}} \frac{J_{K,N} (q)}{J_{\mbox{unknot},N}(q)}.\]
 	\end{block}
 
 \end{frame}
-
-
 
 \end{document}
