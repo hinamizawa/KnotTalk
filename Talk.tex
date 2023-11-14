@@ -151,7 +151,7 @@
 		\animategraphics[loop,controls,width=3.5cm]{10}{pic/Knot_Unfolding-}{0}{50}
 		\caption{Deformation to an unknot}
 	\end{figure}
-
+	\vspace{-0.4cm}
 	\begin{center}
 		unknot = the boundary of a simplicial disk
 	\end{center}
@@ -160,12 +160,11 @@
 
 \end{frame}
 
-\begin{frame}
+\begin{frame}[c]
 	\frametitle{Reidemeister Moves}
 	\begin{theorem}[Reidemeister 1927]
 		Two knots are equivalent if and only if all their diagrams are connected by a finite sequence of Reidemeister moves of Type I, II or III.
 	\end{theorem}
-	In this case, we also say their diagrams are equivalent.
 	% \begin{figure}
 	% 	\centering
 	% 	\includegraphics[width=0.22\textwidth]{pic/type1.png}
@@ -180,9 +179,10 @@
 		\item \RIIa\myarrow\RIIb
 		\item \RIIIa\myarrow\RIIIa[rotate=180]
 	\end{enumerate}
+	In this case, we also say their diagrams are equivalent.
 \end{frame}
 
-\begin{frame}
+\begin{frame}[c]
 	\frametitle{Reidemeister Moves}
 
 	\begin{figure}
@@ -210,7 +210,7 @@
 
 \end{frame}
 
-\begin{frame}
+\begin{frame}[c]
 	\begin{block}{Recognition Problem}
 		Given two knots/knot diagrams, determining the (non-)equivalence of two knots.
 	\end{block}
@@ -218,30 +218,31 @@
 	\begin{block}{Unkotting Problem}
 		Given a knot (diagram), determining whether it is the unknot.
 	\end{block}
-
+	\p
 	{\small{\begin{itemize}
-			\item Both problems are NP.
-			\item $n=$ the sum of crossing numbers of two diagrams; an upper bound on the number of Reidemeister moves is $2^{2^{2^{\dots^n}}}$, where where the height of the tower of $2$s is $10^{1,000,000n}$ (Coward \& Lackenby 2014).
-			\item $c=$ the sum of crossing numbers of an unknot diagram; an upper bound on the number of Reidemeister moves required to arrive at the standard unknot is $(236c)^{11}$ (Lackenby 2015).
-		\end{itemize}}}
+				\item Both problems are NP.
+				\item $n=$ the sum of crossing numbers of two diagrams; an upper bound on the number of Reidemeister moves is $2^{2^{2^{\dots^n}}}$, where where the height of the tower of $2$s is $10^{1,000,000n}$ (Coward \& Lackenby 2014).
+				\item $c=$ the sum of crossing numbers of an unknot diagram; an upper bound on the number of Reidemeister moves required to arrive at the standard unknot is $(236c)^{11}$ (Lackenby 2015).
+			\end{itemize}}}
 \end{frame}
 
 \begin{frame}[c]
 	\frametitle{Unknotting Problem}
 	\begin{figure}[!htb]
 		\centering
-		\begin{minipage}{4cm}
+		\begin{minipage}{4.4cm}
 			\centering
 			\includegraphics[width=3cm]{pic/Ochiai_unknot.png}
 			\caption{One of Ochiai's unknot}
 		\end{minipage}
-		\begin{minipage}{4cm}
+		\begin{minipage}{4.4cm}
 			\centering
 			\includegraphics[width=3cm]{pic/Thistlethwaite_unknot.png}
 			\caption{Thistlethwaite unknot}
 		\end{minipage}
 	\end{figure}
 
+	Not easy, actually very hard, to see both of the knots above are the unknot.
 
 \end{frame}
 
@@ -262,7 +263,7 @@
 	\begin{block}{Topological and Geometricl Invariants}
 		\begin{itemize}
 			\item $\pi_1(K)=\pi_1(\overline{S^3-n(K)})$, the knot group of $K$
-			\item Hyperbolic volume of $\overline{S^3-n(K)}$
+			\item Hyperbolic volume of $\overline{S^3-n(K)}=\vol(K)$, the volume of $K$
 		\end{itemize}
 	\end{block}
 	\p
@@ -288,7 +289,7 @@
 
 % \end{frame}
 
-\begin{frame}
+\begin{frame}[c]
 	\frametitle{Diagrammatic Invariant}
 	\begin{block}{Idea}
 		\begin{center}
@@ -308,7 +309,7 @@
 	\end{tabular}
 \end{frame}
 
-\begin{frame}
+\begin{frame}[c]
 	\frametitle{Kauffman Bracket}
 	\begin{definition}
 		The Kauffman bracket is a function from unoriented link diagrams in the oriented plane to Laurent polynomials $\ZZ[A,A^{-1}]$. It maps a diagram $D$ to $\left\langle D\right\rangle \in\ZZ[A,A^{-1}]$ and is
@@ -317,10 +318,10 @@
 			%the first rule
 			\item[1.] $\left\langle\KPA\right\rangle=1$;
 
-				%the second rule
+			%the second rule
 			\item[2.] $\left\langle L \cup \KPA\right\rangle=(-A^{2}-A^{-2})\langle L\rangle$;
 
-				%the third rule
+			%the third rule
 			\item[3.] $\left\langle\KPB\right\rangle= A\left\langle\KPC\right\rangle + A^{-1} \left\langle \KPD \right\rangle$.
 		\end{enumerate}
 		Or if you tilt your head $\frac{\pi}{2}$,
@@ -331,7 +332,7 @@
 
 \end{frame}
 
-\begin{frame}
+\begin{frame}[c]
 	\frametitle{Kauffman Bracket}
 	\begin{align*}
 		\left\langle\KPUNLINK\right\rangle                                                      & = (-A^{2}-A^{-2})\left\langle\KPA\right\rangle                                                                                                                                                 \\
@@ -352,7 +353,7 @@
 
 \end{frame}
 
-\begin{frame}
+\begin{frame}[c]
 	\frametitle{Writhe}
 	\begin{block}{Oriented Link}
 		A link with a choice of orientation for each complement
@@ -371,12 +372,11 @@
 \end{frame}
 
 
-\begin{frame}
-	\begin{block}{Property of Writhe}
-		The writhe $w(D)$ does not change if $D$ is changed under Reidemeister moves of type II or III; the writhe $w(D)$ does change by $+1$ or $-1$ if $D$ is changed under a Reidemeister move of type I. And the writhe of a knot diagram does \emph{not} depend on the choice of orientation.
-	\end{block}
+\begin{frame}[c]
+	\frametitle{Property of Writhe}
 
-	For example:
+	The writhe $w(D)$ does not change if $D$ is changed under Reidemeister moves of type II or III; the writhe $w(D)$ does change by $+1$ or $-1$ if $D$ is changed under a Reidemeister move of type I. And the writhe of a knot diagram does \emph{not} depend on the choice of orientation.
+
 	\begin{align*}
 		w(\raisebox{-15pt}{\includegraphics[width=1.8cm]{pic/holflp.png}})  & =+2 \\ w(\raisebox{-15pt}{\includegraphics[width=1.8cm]{pic/holfpr.png}})&=-2\\
 		w(\raisebox{-15pt}{\includegraphics[width=1.4cm]{pic/trifoil.png}}) & =-3
@@ -384,7 +384,7 @@
 
 \end{frame}
 
-\begin{frame}
+\begin{frame}[c]
 	\frametitle{Jones Polynomial}
 	\begin{theorem}
 		Let $D$ be a diagram of an oriented link $L$. Then the expression \[(-A)^{-3w(D)}\langle D\rangle\] is an invariant of the oriented link $L$.
@@ -398,18 +398,17 @@
 \begin{frame}
 	\frametitle{Hopf Link}
 	\begin{align*}
-		\left\langle \raisebox{-10pt}{\includegraphics[width=1.6cm]{pic/holflp.png}} \right\rangle & = A\left\langle \raisebox{-10pt}{\includegraphics[width=1.6cm]{pic/hopfunkot2.png}} \right\rangle +A^{-1} \left\langle \raisebox{-10pt}{\includegraphics[width=1.6cm]{pic/hopfunkot1.png}} \right\rangle \\
-		                                                                                           & = A(-A^3)+A^{-1} (-A^{-3}) =-A^4-A^{-4}                                                                                                                                                                  \\
-		w(\raisebox{-10pt}{\includegraphics[width=1.6cm]{pic/holflp.png}})                         & =2;\quad w(\raisebox{-10pt}{\includegraphics[width=1.6cm]{pic/holfpr.png}}) =-2
-		                                                                                           &                                                                                                                                                                                                          \\
-		V(\raisebox{-10pt}{\includegraphics[width=1.6cm]{pic/holflp.png}})                         & = \left(-A^{-2}-A^{-10}\right)_{t^{1/2}=A^{-2}} = -t^{1/2}-t^{5/2}                                                                                                                                       \\
-		V(\raisebox{-10pt}{\includegraphics[width=1.6cm]{pic/holfpr.png}})                         & = \left(-A^{10}-A^{2}\right)_{t^{1/2}=A^{-2}} = -t^{-5/2}-t^{-1/2}
+		\left\langle \raisebox{-10pt}{\includegraphics[width=1.6cm]{pic/hopf.png}} \right\rangle & = A\left\langle \raisebox{-10pt}{\includegraphics[width=1.6cm]{pic/hopfunkot2.png}} \right\rangle +A^{-1} \left\langle \raisebox{-10pt}{\includegraphics[width=1.6cm]{pic/hopfunkot1.png}} \right\rangle \\
+		                                                                                         & = A(-A^3)+A^{-1} (-A^{-3}) =-A^4-A^{-4}                                                                                                                                                                  \\
+		w(\raisebox{-10pt}{\includegraphics[width=1.6cm]{pic/holflp.png}})                       & =2;\quad w(\raisebox{-10pt}{\includegraphics[width=1.6cm]{pic/holfpr.png}}) =-2
+		                                                                                         &                                                                                                                                                                                                          \\
+		V(\raisebox{-10pt}{\includegraphics[width=1.6cm]{pic/holflp.png}})                       & = \left(-A^{-2}-A^{-10}\right)_{t^{1/2}=A^{-2}} = -t^{1/2}-t^{5/2}                                                                                                                                       \\
+		V(\raisebox{-10pt}{\includegraphics[width=1.6cm]{pic/holfpr.png}})                       & = \left(-A^{10}-A^{2}\right)_{t^{1/2}=A^{-2}} = -t^{-5/2}-t^{-1/2}
 	\end{align*}
-
 
 \end{frame}
 
-\begin{frame}
+\begin{frame}[c]
 	\frametitle{Left Trefoil Knot}
 
 	\begin{align*}
@@ -421,19 +420,19 @@
 
 \end{frame}
 
-\begin{frame}
+\begin{frame}[c]
 	\frametitle{Right Trefoil Knot}
 	\begin{align*}
 		\left\langle \raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/trifoilrightkaff.png}} \right\rangle & = A\left\langle \raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/trifoilrightkaff1.png}} \right\rangle +A^{-1} \left\langle \raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/trifoilrightkaff2.png}} \right\rangle \\
 		                                                                                                     & = A(-A^4-A^{-4})+A^{-1} (-A^{-3})^2 =A^{-7}-A^{-3}-A^{5}                                                                                                                                                               \\
-		w(\raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/righttrefoil.png}})                         & =3                                                                                                                                                                                                                     \\
-		V(\raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/righttrefoil.png}})                         & = \left(-A^{16}+A^{12}+A^4\right)_{t^{1/2}=A^{-2}} = -t^{-4}+t^{-3}+t^{-1}
+		w(\raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/righttrefoil.png}})                             & =3                                                                                                                                                                                                                     \\
+		V(\raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/righttrefoil.png}})                             & = \left(-A^{16}+A^{12}+A^4\right)_{t^{1/2}=A^{-2}} = -t^{-4}+t^{-3}+t^{-1}
 	\end{align*}
 
 
 \end{frame}
 
-\begin{frame}
+\begin{frame}[c]
 	\frametitle{Mirrow Image}
 
 	\begin{block}{Mirror Image}
@@ -447,7 +446,7 @@
 
 \end{frame}
 
-\begin{frame}
+\begin{frame}[c]
 	\frametitle{Properties of Jones Polynomials}
 	\begin{theorem}
 		The Jones polynomial of the mirror image $\bar L$ of an oriented link $L$ is the conjugate under $t\leftrightarrow t^{-1}$ of the polynomial of $L$.
@@ -464,7 +463,7 @@
 
 \end{frame}
 
-\begin{frame}
+\begin{frame}[c]
 	\frametitle{Connected Sum}
 
 	% \begin{block}{Connected sum of knots}
@@ -487,7 +486,7 @@
 	\end{figure}
 \end{frame}
 
-\begin{frame}
+\begin{frame}[c]
 	\frametitle{Properties of Jones Polynomials}
 	\begin{theorem}
 		Let $K_1, K_2$ be two (oriented) knots. Then we have \[V(K_1+K_2)=V(K_1)V(K_2).\]
@@ -496,35 +495,45 @@
 		Consider a calculation if the polynomial of $K_1+K_2$ and operate firstly on the crossings of just one summand.
 	\end{block}
 
+	\begin{figure}
+		\centering
+		\includegraphics[width=4cm]{pic/Sum_of_knots3.png}
+	\end{figure}
+
 \end{frame}
 
 
-\begin{frame}
+\begin{frame}[c]
 	\frametitle{Yet Another Approach}
 
 	\begin{block}{Definiton-Theorem}
-		The Jones polynomial invariant is a function\[V:\{\mbox{Oritented links in }S^3\}\to \ZZ[t^{1/2}, t^{-1/2}]\] such that \begin{enumerate}[I.]
-			\item $V(\KPA)=1$
-			\item whenever three oriented links $L_+, L_-$ and $L_0$ are the same, except in the neighbourhood of a point where they are shown as in the next slide, then 
-			\[t^{-1}V(L_+)- tV(L_-)+(t^{-1/2}-t^{1/2})V(L_0)=0.\]
+		The Jones polynomial invariant is a function from the set of oriented links in $S^3$ to $\ZZ[t^{1/2},t^{-1/2}]$ such that \begin{enumerate}[I.]
+			\item $V(\KPA)=1$;
+			\item whenever three oriented links $L_+, L_-$ and $L_0$ are the same, except in the neighbourhood of a point where they are shown below, then
+			      \[t^{-1}V(L_+)- tV(L_-)+(t^{-1/2}-t^{1/2})V(L_0)=0.\]
 		\end{enumerate}
 	\end{block}
+	\begin{center}
+		\begin{tabular}{ l  l l }
+			$L_+$: \raisebox{-10pt}{\includegraphics[width=1.5cm]{pic/lplus.png}} & $L_-$:\raisebox{-10pt}{\includegraphics[width=1.5cm]{pic/lmin.png}} & $L_0$:\raisebox{-10pt}{\includegraphics[width=1.5cm]{pic/l0.png}}
+		\end{tabular}
+	\end{center}
 
 \end{frame}
 
-\begin{frame}
+\begin{frame}[c]
 	\frametitle{Skein Relation}
 	\[t^{-1}V(L_+)- tV(L_-)+(t^{-1/2}-t^{1/2})V(L_0)=0\]
 	\begin{center}
 		\begin{tabular}{ l  l l }
-			$L_+$: \raisebox{-10pt}{\includegraphics[width=1.5cm]{pic/lplus.png}}& $L_-$:\raisebox{-10pt}{\includegraphics[width=1.5cm]{pic/lmin.png}} & $L_0$:\raisebox{-10pt}{\includegraphics[width=1.5cm]{pic/l0.png}}
+			$L_+$: \raisebox{-10pt}{\includegraphics[width=1.5cm]{pic/lplus.png}} & $L_-$:\raisebox{-10pt}{\includegraphics[width=1.5cm]{pic/lmin.png}} & $L_0$:\raisebox{-10pt}{\includegraphics[width=1.5cm]{pic/l0.png}}
 		\end{tabular}
 	\end{center}
 
 	\begin{block}{Skein Relation}
 		In general, a skein relationship requires three link diagrams that are identical except at one crossing. To recursively define a knot (link) polynomial, a function $F$ is fixed and for any triple of diagrams and their polynomials labelled as above, \[F(L_+,L_-,L_0)=0.\]
 	\end{block}
-	
+
 \end{frame}
 
 \begin{frame}[c]
@@ -532,27 +541,63 @@
 
 	\begin{center}
 		\begin{tabular}{ l  l l }
-			$L_+$: \raisebox{-10pt}{\includegraphics[width=2cm]{pic/unlinklp.png}}& $L_-$:\raisebox{-10pt}{\includegraphics[width=2cm]{pic/unlinklm.png}} & $L_0$:\raisebox{-10pt}{\includegraphics[width=2cm]{pic/unlinkl0.png}}
+			$L_+$: \raisebox{-10pt}{\includegraphics[width=2cm]{pic/unlinklp.png}} & $L_-$:\raisebox{-10pt}{\includegraphics[width=2cm]{pic/unlinklm.png}} & $L_0$:\raisebox{-10pt}{\includegraphics[width=2cm]{pic/unlinkl0.png}}
 		\end{tabular}
 	\end{center}
 	\[t^{-1}V(L_+)- tV(L_-)+(t^{-1/2}-t^{1/2})V(L_0)=0\]
-	But $L_+$ and $L_-$ are the unknot, so $V(L_+)=V(L_-)=1$.
+	But $L_+$ and $L_-$ are both the unknot, so $V(L_+)=V(L_-)=1$.
 	\begin{align*}
-		V(L_0)&=-\frac{t^{-1}- t}{t^{-1/2}-t^{1/2}}\\
-		V(L_0)&=-t^{-1/2}-t^{1/2}
+		V(L_0) & =-\frac{t^{-1}- t}{t^{-1/2}-t^{1/2}} \\
+		V(L_0) & =-t^{-1/2}-t^{1/2}
 	\end{align*}
 
 
 \end{frame}
 
-\begin{frame}
+\begin{frame}[c]
 	\frametitle{Yet Another Approach}
+	\begin{block}{Observation}
+		Given a knot diagram, if you change all $\KPB$ to either $\KPC$ or $\KPD$, then you arrive at an unlink.
+	\end{block}
+	\begin{itemize}
+		\item 	Label crossings in a knot diagram $D$ as $1,\dots,n$.
+		\item A \emph{state} for $D$ is a function $s:\{1,\dots,n\}\to\{+1,-1\}$.
+		\item There are $2^n$ states.
+		\item Let $sD$ be the diagram by replacing each crossings according to \[\KPD \xleftarrow{\ \text{ if }s(i)=-1\ } \KPB \xrightarrow{\ \text{ if }s(i)=+1\ }  \KPC\]
+		      for the $i^\text{th}$ crossing.
+		\item $|sD| =$ number of complements in the unlink $sD$
 
-
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Conjecture}
+	\frametitle{State Sum}
+	\begin{block}{Definition-Theorem (Kauffman 1986)}
+		Let $D$ be a link diagram (of an oriented link $L$) with $n$ crossings. Then the Kauffman bracket of $D$ is given by
+		\[\langle D\rangle = \sum_s (A^{\sum_{i=1}^n s(i)} (-A^{-2}-A^2)^{|sD|-1}) \]
+		where the summation is over all states $s:\{1,\dots,n\}\to\{+1,-1\}$.
+
+		Therefore, the Jones polynomial of $L$ is given by
+		\[V(L)= \left( (-A)^{-3w(D)}\langle \sum_s (A^{\sum_{i=1}^n s(i)} (-A^{-2}-A^2)^{|sD|-1}) \rangle \right)_{t^{1/2}=A^{-2}}.\]
+	\end{block}
+\end{frame}
+
+\begin{frame}[c]
+	\begin{figure}
+		\centering
+		\includegraphics[width=6cm]{pic/statesum.png}
+	\end{figure}
+	\vspace{-0.4cm}
+	\small
+	\begin{align*}
+		\hspace{-0.2cm}\langle\text{left-handed trefoil knot}\rangle & = 3A^{-1}+(A^{-3}+3A)(-A^{-2}-A^2)+A^3(-A^{-2}-A^{2})^2 \\
+		                                                             & = A^7-A^3-A^{-5}
+	\end{align*}
+
+\end{frame}
+
+\begin{frame}[c]
+	\frametitle{Open Problem}
 
 	Facts:
 	\begin{itemize}
@@ -568,41 +613,41 @@
 \end{frame}
 
 
-\begin{frame}
+\begin{frame}[c]
 	\frametitle{Coloured Jones Polynomials}
 
-		None of the three methods discussed in this talk was Jones' original approach, whose original formulation of his polynomial came from his study of operator algebras. His work is generalized to vase families of invariants, called quantum invariants.
+	None of the three methods discussed in this talk was Jones' original approach, where his formulation of the polynomial came from his study of operator algebras. His work is generalized to vase families of invariants, called quantum invariants.
 
-		\begin{itemize}
-			\item The coloured Jones polynomials is a infinite sequence of Laurent polynomials $\{J_{K,n}(t)\}_n$, encoding the Jones polynomial of $K$ and these of the links $K^s$ that are the \emph{parallels} of $K$.
-			\item Formulae for $J_{K,n}(t)$ come from representation theory of $SU(2)$ by decomposition of tensor product of representations.
-			\item $J_{K,n}(t)$ can be calculated from any knot diagram via processes such as skein theory, state sums, $R$-matrices, and ...
-		\end{itemize}
+	\begin{itemize}
+		\item The coloured Jones polynomials is an infinite sequence of Laurent polynomials $\{J_{K,n}(t)\}_n$, encoding the Jones polynomial of $K$ and these of the links $K^s$ that are the \emph{parallels} of $K$.
+		\item Formulae for $J_{K,n}(t)$ come from representation theory of $SU(2)$ by decomposition of tensor product of representations.
+		\item $J_{K,n}(t)$ can be calculated from any knot diagram via processes such as skein theory, state sums, $R$-matrices, and ...
+	\end{itemize}
 
 \end{frame}
 
-\begin{frame}
+\begin{frame}[c]
 	\frametitle{Coloured Jones Polynomials}
 
-		Fot this talk:
+	Fot this talk:
 
-		\begin{itemize}
-			\item  $J_{K,1}(t)=1$,
-			\item  $J_{K,2}(t)=V(K)$ - original Jones polynomial,
-			\item  $J_{K,3}(t)=V(K^2)-1$,
-			\item  $J_{K,4}(t)=V(K^3)-2V(K)$,
-			\item ...
-		\end{itemize}
-		\begin{figure}
-			\includegraphics[width=2cm]{pic/fig8.png}
-			\hspace{0.5cm}
-			\includegraphics[width=2cm]{pic/fig83.png}
-			\caption{Figure-8 knot and its parallels}
-		\end{figure}
+	\begin{itemize}
+		\item  $J_{K,1}(t)=1$,
+		\item  $J_{K,2}(t)=V(K)$ - original Jones polynomial,
+		\item  $J_{K,3}(t)=V(K^2)-1$,
+		\item  $J_{K,4}(t)=V(K^3)-2V(K)$,
+		\item ...
+	\end{itemize}
+	\begin{figure}
+		\includegraphics[width=2cm]{pic/fig8.png}
+		\hspace{0.5cm}
+		\includegraphics[width=2cm]{pic/fig83.png}
+		\caption{Figure-8 knot and its parallels}
+	\end{figure}
 
 \end{frame}
 
-\begin{frame}
+\begin{frame}[c]
 	\frametitle{Conjectures}
 
 	\begin{block}{Volume Conjecture}
