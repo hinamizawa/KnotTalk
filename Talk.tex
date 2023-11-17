@@ -104,6 +104,9 @@
   }%
 }
 
+\newcommand{\tabitem}{%
+  \usebeamertemplate{itemize item}\hspace*{\labelsep}}
+
 \newcommand{\knotlinewidth}{.7pt}
 \newcommand{\myarrow}{$\quad\longleftrightarrow\quad$}
 \newcommand{\RIa}[1][]{\tikz[knot, #1]{\draw(-.5,.5) to[out=-90,in=-90] (.5,0); \draw[overcross] (.5,0) to[out=90,in=90] (-.5,-.5);}}
@@ -144,6 +147,25 @@
 	\end{figure}
 \end{frame}
 
+
+\begin{frame}[c]
+	\frametitle{Definitions}
+	\begin{center}
+		Knot = A piece-wise linear (or smooth) embedding of $S^1$ into $\RR^3$ or $S^3$\\
+		\vspace{0.1in}
+		Link = A p.l. (or smooth) embedding of disjoint circles into $\RR^3$ or $S^3$
+	\end{center}
+
+	\begin{figure}
+		\centering
+		\includegraphics[width=10cm]{pic/prime-knots.png}
+	\end{figure}
+
+	\begin{block}{Knot Diagrams}
+		A picture of a projection of a knot onto a plane
+	\end{block}
+\end{frame}
+
 \begin{frame}[c]
 	\frametitle{Knot Equivalence}
 	Two knots are \emph{equivalent} if one knot can be pushed about smoothly, without intersecting itself, to coincide with another knot.
@@ -162,55 +184,61 @@
 
 \end{frame}
 
-\begin{frame}[c]
+\begin{frame}
 	\frametitle{Reidemeister Moves}
 	\begin{theorem}[Reidemeister 1927]
 		Two knots are equivalent if and only if all their diagrams are connected by a finite sequence of Reidemeister moves of Type I, II or III.
 	\end{theorem}
-	% \begin{figure}
-	% 	\centering
-	% 	\includegraphics[width=0.22\textwidth]{pic/type1.png}
-	% 	\hspace{0.5cm}
-	% 	\includegraphics[width=0.24\textwidth]{pic/type2.png}
-	% 	\hspace{0.5cm}
-	% 	\includegraphics[width=0.24\textwidth]{pic/type3.png}
-	% 	\caption{Reidemeister moves}
-	% \end{figure}
-	\begin{enumerate}[I.]
-		\item \RIa\myarrow\RIb
-		\item \RIIa\myarrow\RIIb
-		\item \RIIIa\myarrow\RIIIa[rotate=180]
-	\end{enumerate}
+	\begin{center}
+		\begin{minipage}{0.5\textwidth}
+			\begin{enumerate}[I.]
+				\item \RIa\myarrow\RIb
+				\item \RIIa\myarrow\RIIb
+				\item \RIIIa\myarrow\RIIIa[rotate=180]
+			\end{enumerate}
+		\end{minipage}
+	\end{center}
+
 	In this case, we also say their diagrams are equivalent.
 \end{frame}
 
-\begin{frame}[c]
+\begin{frame}
 	\frametitle{Reidemeister Moves}
 
-	\begin{figure}
-		\centering
-		\includegraphics[width=10cm]{pic/rmseq.png}
-	\end{figure}
-	\p
 	\begin{block}{Remark}
 		The following moves can be seen (exercise) to be consequences of the three types of Reidemeister move.
 	\end{block}
-	% \begin{figure}
-	% 	\centering
-	% 	\includegraphics[width=0.22\textwidth]{pic/type11.png}
-	% 	\hspace{0.5cm}
-	% 	\includegraphics[width=0.24\textwidth]{pic/type21.png}
-	% 	\hspace{0.5cm}
-	% 	\includegraphics[width=0.24\textwidth]{pic/type31.png}
-	% 	\caption{Not Reidemeister moves, but their consequences}
-	% \end{figure}
-	% \end{figure}
-	\begin{itemize}
-		\item \RIa[yscale=-1]\myarrow\RIb \ ; \quad \RIIc\myarrow\RIIb
-		\item \RIIIa[xscale=-1]\myarrow\RIIIa[xscale=-1, rotate=180]
-	\end{itemize}
-
+	\begin{center}
+		\begin{minipage}{0.5\textwidth}
+			\begin{enumerate}[I.']
+				\item \RIa[yscale=-1]\myarrow\RIb
+				\item \RIIc\myarrow\RIIb
+				\item \RIIIa[xscale=-1]\myarrow\RIIIa[xscale=-1, rotate=180]
+			\end{enumerate}
+		\end{minipage}
+	\end{center}
 \end{frame}
+
+\begin{frame}
+	\frametitle{Reidemeister Moves}
+	\begin{center}
+		\begin{minipage}{0.5\textwidth}
+			\begin{enumerate}[I.]
+				\item \RIa\myarrow\RIb
+				\item \RIIa\myarrow\RIIb
+				\item \RIIIa\myarrow\RIIIa[rotate=180]
+			\end{enumerate}
+		\end{minipage}
+	\end{center}
+
+	\vspace{0.4cm}
+
+	\begin{figure}
+		\centering
+		\includegraphics[width=10.5cm]{pic/rmseq.png}
+	\end{figure}
+\end{frame}
+
 
 \begin{frame}[c]
 	\begin{block}{Recognition Problem}
@@ -232,10 +260,10 @@
 	\frametitle{Unknotting Problem}
 	\begin{figure}[!htb]
 		\centering
-		\begin{minipage}{4.4cm}
+		\begin{minipage}{5cm}
 			\centering
-			\includegraphics[width=3cm]{pic/Ochiai_unknot.png}
-			\caption{One of Ochiai's unknot}
+			\includegraphics[width=4cm]{pic/Ochiai_unknot.png}
+			\caption{One of Ochiai's unknots}
 		\end{minipage}
 		\begin{minipage}{4.4cm}
 			\centering
@@ -259,10 +287,10 @@
 	\[K_1=K_2 \quad\Longrightarrow\quad \overline{S^3-n(K_1)}=\overline{S^3-n(K_2)} \]
 
 	\begin{center}
-		Invariant of $\overline{S^3-n(K)}\quad \Longrightarrow \quad$ Invariant of $K$
+		Invariants of $\overline{S^3-n(K)}\quad \Longrightarrow \quad$ Invariants of $K$
 	\end{center}
 
-	\begin{block}{Topological and Geometricl Invariants}
+	\begin{block}{Topological and Geometric Invariants}
 		\begin{itemize}
 			\item $\pi_1(K)=\pi_1(\overline{S^3-n(K)})$, the knot group of $K$
 			\item Hyperbolic volume of $\overline{S^3-n(K)}=\vol(K)$, the volume of $K$
@@ -317,13 +345,8 @@
 		The Kauffman bracket is a function from unoriented link diagrams in the oriented plane to Laurent polynomials $\ZZ[A,A^{-1}]$. It maps a diagram $D$ to $\left\langle D\right\rangle \in\ZZ[A,A^{-1}]$ and is
 		characterized by
 		\begin{enumerate}
-			%the first rule
 			\item[1.] $\left\langle\KPA\right\rangle=1$;
-
-			%the second rule
 			\item[2.] $\left\langle L \cup \KPA\right\rangle=(-A^{2}-A^{-2})\langle L\rangle$;
-
-			%the third rule
 			\item[3.] $\left\langle\KPB\right\rangle= A\left\langle\KPC\right\rangle + A^{-1} \left\langle \KPD \right\rangle$.
 		\end{enumerate}
 		Or if you tilt your head $\frac{\pi}{2}$,
@@ -331,31 +354,94 @@
 			\item[3'.] $\left\langle\KPBB\right\rangle= A\left\langle\KPD\right\rangle + A^{-1} \left\langle \KPC \right\rangle$.
 		\end{enumerate}
 	\end{definition}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Kauffman Bracket}
+	\begin{block}{Observation}
+		Given a knot diagram, if you change all $\KPB$ to either $\KPC$ or $\KPD$, then you arrive at an unlink.
+	\end{block}
+
+	\begin{enumerate}
+		\item[1.] $\left\langle\KPA\right\rangle=1$;
+		\item[2.] $\left\langle L \cup \KPA\right\rangle=(-A^{2}-A^{-2})\langle L\rangle$;
+		\item[3.] $\left\langle\KPB\right\rangle= A\left\langle\KPC\right\rangle + A^{-1} \left\langle \KPD \right\rangle$.
+	\end{enumerate}
+	% Or if you tilt your head $\frac{\pi}{2}$,
+	% \begin{enumerate}
+	% 	\item[3'.] $\left\langle\KPBB\right\rangle= A\left\langle\KPD\right\rangle + A^{-1} \left\langle \KPC \right\rangle$.
+	% \end{enumerate}
+	\vspace{0.4cm}
+
+	Applying this rules repetitively, we get a Laurent polynomial.
 
 \end{frame}
 
-\begin{frame}[c]
+\begin{frame}
 	\frametitle{Kauffman Bracket}
+	\begin{enumerate}
+		\item[1.] $\left\langle\KPA\right\rangle=1$;
+		\item[2.] $\left\langle L \cup \KPA\right\rangle=(-A^{2}-A^{-2})\langle L\rangle$;
+		\item[3.] $\left\langle\KPB\right\rangle= A\left\langle\KPC\right\rangle + A^{-1} \left\langle \KPD \right\rangle$.
+	\end{enumerate}
+
+	\vspace{0.2cm}
+	An asy calculation with the unlink:
 	\begin{align*}
-		\left\langle\KPUNLINK\right\rangle                                                      & = (-A^{2}-A^{-2})\left\langle\KPA\right\rangle                                                                                                                                                 \\
-		                                                                                        & =-A^2-A^{-2}                                                                                                                                                                                   \\
-		                                                                                        &                                                                                                                                                                                                \\
+		\left\langle\KPUNLINK\right\rangle & = (-A^{2}-A^{-2})\left\langle\KPA\right\rangle \\
+		                                   & =-A^2-A^{-2}
+	\end{align*}
+
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Kauffman Bracket}
+	\begin{enumerate}
+		\item[1.] $\left\langle\KPA\right\rangle=1$;
+		\item[2.] $\left\langle L \cup \KPA\right\rangle=(-A^{2}-A^{-2})\langle L\rangle$;
+		\item[3.] $\left\langle\KPB\right\rangle= A\left\langle\KPC\right\rangle + A^{-1} \left\langle \KPD \right\rangle$.
+	\end{enumerate}
+	\vspace{0.4cm}
+	Recall that
+	\[\left\langle\KPUNLINK\right\rangle   =-A^2-A^{-2}. \]
+	Another example:
+	\begin{align*}
 		\left\langle \raisebox{-10pt}{\includegraphics[width=1cm]{pic/kbun1.png}} \right\rangle & = A   \left\langle \raisebox{-10pt}{\includegraphics[width=1cm]{pic/kbun2.png}} \right\rangle  + A^{-1}\left\langle \raisebox{-10pt}{\includegraphics[width=1cm]{pic/kbun3.png}} \right\rangle \\
 		                                                                                        & =A\cdot 1 + A^{-1}(-A^2-A^{-2})                                                                                                                                                                \\
 		                                                                                        & = -A^{-3}
 	\end{align*}
 
-	{\small
-	\hspace*{-1cm}
-	\begin{tabular}{ l l }
-		Bad news:  & The Kauffman bracket does \emph{not} respect Reidemeister moves of Type I. \\
-		Good news: & The Kauffman bracket respects Reidemeister moves of Type II and III.
-	\end{tabular}
-	}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Kauffman Bracket}
+	\vspace{-0.4cm}
+	\begin{align*}
+		\left\langle \raisebox{-10pt}{\includegraphics[width=1cm]{pic/kbun1.png}} \right\rangle & = A   \left\langle \raisebox{-10pt}{\includegraphics[width=1cm]{pic/kbun2.png}} \right\rangle  + A^{-1}\left\langle \raisebox{-10pt}{\includegraphics[width=1cm]{pic/kbun3.png}} \right\rangle \\
+		                                                                                        & =A\cdot 1 + A^{-1}(-A^2-A^{-2})                                                                                                                                                                \\
+		                                                                                        & = -A^{-3}
+	\end{align*}
+	\vspace{-0.4cm}
+	\begin{block}{Good News}
+		The Kauffman bracket respects Reidemeister moves of Type II and III.
+	\end{block}
+
+	\begin{block}{Bad News}
+		The Kauffman bracket does \alert{not} respect Reidemeister moves of Type I.
+	\end{block}
+	Indeed, Type I gives an extra $-A^3$ factor and Type I' $-A^{-3}$.
+	% {\small
+	% \hspace*{-1cm}
+	% \begin{tabular}{ l l }
+	% 	Bad news:  & The Kauffman bracket does \emph{not} respect Reidemeister moves of Type I. \\
+	% 	Good news: & The Kauffman bracket respects Reidemeister moves of Type II and III.
+	% \end{tabular}
+	% }
 
 \end{frame}
 
-\begin{frame}[c]
+\begin{frame}
 	\frametitle{Writhe}
 	\begin{block}{Oriented Link}
 		A link with a choice of orientation for each complement
@@ -375,13 +461,19 @@
 
 
 \begin{frame}[c]
-	\frametitle{Property of Writhe}
+	\frametitle{}
 
-	The writhe $w(D)$ does not change if $D$ is changed under Reidemeister moves of type II or III; the writhe $w(D)$ does change by $+1$ or $-1$ if $D$ is changed under a Reidemeister move of type I. And the writhe of a knot diagram does \emph{not} depend on the choice of orientation.
+	\begin{block}{Property of Writhe}
+		\begin{itemize}
+			\item $w(D)$ does not change if $D$ is changed under Reidemeister moves of type II or III.
+			\item $w(D)$ does change by $+1$ or $-1$ if $D$ is changed under a Reidemeister move of type I or I'.
+			\item The writhe of a knot diagram does \emph{not} depend on the choice of orientation.
+		\end{itemize}
+	\end{block}
 
 	\begin{align*}
-		w(\raisebox{-15pt}{\includegraphics[width=1.8cm]{pic/holflp.png}})  & =+2 \\ w(\raisebox{-15pt}{\includegraphics[width=1.8cm]{pic/holfpr.png}})&=-2\\
-		w(\raisebox{-15pt}{\includegraphics[width=1.4cm]{pic/trifoil.png}}) & =-3
+		w(\raisebox{-15pt}{\includegraphics[width=1.8cm]{pic/holflp.png}})  = +2; \quad & w(\raisebox{-15pt}{\includegraphics[width=1.8cm]{pic/holfpr.png}})=-2 \\
+		w(\raisebox{-15pt}{\includegraphics[width=1.4cm]{pic/trifoil.png}})             & =-3
 	\end{align*}
 
 \end{frame}
@@ -411,7 +503,7 @@
 \end{frame}
 
 \begin{frame}[c]
-	\frametitle{Left Trefoil Knot}
+	\frametitle{Left-handed Trefoil Knot}
 
 	\begin{align*}
 		\left\langle \raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/trifoilkaff.png}} \right\rangle & = A\left\langle \raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/trifoilkaff1.png}} \right\rangle +A^{-1} \left\langle \raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/trifoilkaff2.png}} \right\rangle \\
@@ -423,7 +515,7 @@
 \end{frame}
 
 \begin{frame}[c]
-	\frametitle{Right Trefoil Knot}
+	\frametitle{Right-handed Trefoil Knot}
 	\begin{align*}
 		\left\langle \raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/trifoilrightkaff.png}} \right\rangle & = A\left\langle \raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/trifoilrightkaff1.png}} \right\rangle +A^{-1} \left\langle \raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/trifoilrightkaff2.png}} \right\rangle \\
 		                                                                                                     & = A(-A^4-A^{-4})+A^{-1} (-A^{-3})^2 =A^{-7}-A^{-3}-A^{5}                                                                                                                                                               \\
@@ -443,7 +535,7 @@
 	\begin{figure}
 		\centering
 		\includegraphics[width=6cm]{pic/The_two_trefoil_knots.png}
-		\caption{The left-handed and right-handed trefoil knots are not equivalent}
+		\caption{The right-handed and left-handed trefoil knots are not equivalent}
 	\end{figure}
 
 \end{frame}
@@ -476,7 +568,7 @@
 	% 		\item Now join the two knots together by deleting these arcs from the knots and adding the arcs that form the other pair of sides of the rectangle.
 	% 	\end{itemize}
 	% \end{block}
-	Connected sum of (oriented) knots $K_1+K_2$:
+	Connected sum of (oriented) knots $K_1\#K_2$:
 
 	\begin{figure}
 		\centering
@@ -491,10 +583,10 @@
 \begin{frame}[c]
 	\frametitle{Properties of Jones Polynomials}
 	\begin{theorem}
-		Let $K_1, K_2$ be two (oriented) knots. Then we have \[V(K_1+K_2)=V(K_1)V(K_2).\]
+		Let $K_1, K_2$ be two (oriented) knots. Then we have \[V(K_1\# K_2)=V(K_1)V(K_2).\]
 	\end{theorem}
 	\begin{block}{Sketch of proof}
-		Consider a calculation if the polynomial of $K_1+K_2$ and operate firstly on the crossings of just one summand.
+		Consider a calculation of the polynomial of $K_1+K_2$ and operate firstly on the crossings of just one summand.
 	\end{block}
 
 	\begin{figure}
@@ -550,9 +642,8 @@
 	But $L_+$ and $L_-$ are both the unknot, so $V(L_+)=V(L_-)=1$.
 	\begin{align*}
 		V(L_0) & =-\frac{t^{-1}- t}{t^{-1/2}-t^{1/2}} \\
-		V(L_0) & =-t^{-1/2}-t^{1/2}
+		       & =-t^{-1/2}-t^{1/2}
 	\end{align*}
-
 
 \end{frame}
 
