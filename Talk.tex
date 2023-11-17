@@ -132,7 +132,7 @@
 
 \frame{\titlepage}
 
-\begin{frame}[c]
+\begin{frame}[t]
 	\frametitle{Definitions}
 	\begin{center}
 		Knot = A piece-wise linear (or smooth) embedding of $S^1$ into $\RR^3$ or $S^3$\\
@@ -148,7 +148,7 @@
 \end{frame}
 
 
-\begin{frame}[c]
+\begin{frame}[t]
 	\frametitle{Definitions}
 	\begin{center}
 		Knot = A piece-wise linear (or smooth) embedding of $S^1$ into $\RR^3$ or $S^3$\\
@@ -206,7 +206,7 @@
 	\frametitle{Reidemeister Moves}
 
 	\begin{block}{Remark}
-		The following moves can be seen (exercise) to be consequences of the three types of Reidemeister move.
+		The following moves can be seen (exercise) to be consequences of the three types of Reidemeister moves.
 	\end{block}
 	\begin{center}
 		\begin{minipage}{0.5\textwidth}
@@ -339,7 +339,7 @@
 	\end{tabular}
 \end{frame}
 
-\begin{frame}[c]
+\begin{frame}
 	\frametitle{Kauffman Bracket}
 	\begin{definition}
 		The Kauffman bracket is a function from unoriented link diagrams in the oriented plane to Laurent polynomials $\ZZ[A,A^{-1}]$. It maps a diagram $D$ to $\left\langle D\right\rangle \in\ZZ[A,A^{-1}]$ and is
@@ -386,7 +386,7 @@
 	\end{enumerate}
 
 	\vspace{0.2cm}
-	An asy calculation with the unlink:
+	An easy calculation with the unlink:
 	\begin{align*}
 		\left\langle\KPUNLINK\right\rangle & = (-A^{2}-A^{-2})\left\langle\KPA\right\rangle \\
 		                                   & =-A^2-A^{-2}
@@ -508,7 +508,7 @@
 	\begin{align*}
 		\left\langle \raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/trifoilkaff.png}} \right\rangle & = A\left\langle \raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/trifoilkaff1.png}} \right\rangle +A^{-1} \left\langle \raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/trifoilkaff2.png}} \right\rangle \\
 		                                                                                                & = A(-A^3)^2+A^{-1} (-A^{-4}-A^4) =A^7-A^3-A^{-5}                                                                                                                                                             \\
-		w(\raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/trifoillskein.png}})                       & =-3                                                                                                                                                                                                          \\
+		w(\raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/trifoil.png}})                       & =-3                                                                                                                                                                                                          \\
 		V(\raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/trifoil.png}})                             & = \left(-A^{16}+A^{12}+A^4\right)_{t^{1/2}=A^{-2}} = -t^{-4}+t^{-3}+t^{-1}
 	\end{align*}
 
@@ -586,7 +586,7 @@
 		Let $K_1, K_2$ be two (oriented) knots. Then we have \[V(K_1\# K_2)=V(K_1)V(K_2).\]
 	\end{theorem}
 	\begin{block}{Sketch of proof}
-		Consider a calculation of the polynomial of $K_1+K_2$ and operate firstly on the crossings of just one summand.
+		Consider a calculation of the polynomial of $K_1\#K_2$ and operate firstly on the crossings of just one summand.
 	\end{block}
 
 	\begin{figure}
@@ -702,7 +702,7 @@
 		The only knot with Jones polynomial $V(K)=1$ is the unknot.
 	\end{block}
 
-	The conjecture has been confirmed for several families of knots, including alternating and adequate knots, and knots up to 18 crossings.
+	The conjecture has been confirmed for several families of knots, including alternating knots and knots up to 23 crossings (as of 2019).
 \end{frame}
 
 
@@ -746,6 +746,7 @@
 	\begin{block}{Volume Conjecture}
 		Let $K$ be a hyperbolic knot. Then \[\vol(K)=\lim_{N\to\infty}\frac{2\pi \log |\langle K\rangle_N |}{N},\] where \[\langle K\rangle_N=\lim_{q\to e^{2\pi i/N}} \frac{J_{K,N} (q)}{J_{\mbox{unknot},N}(q)}.\]
 	\end{block}
+	Note that this conjecture relates quantum invariants of knots to the hyperbolic geometry of knot complements.
 
 \end{frame}
 
