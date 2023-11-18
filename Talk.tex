@@ -465,8 +465,8 @@
 
 	\begin{block}{Property of Writhe}
 		\begin{itemize}
-			\item $w(D)$ does not change if $D$ is changed under Reidemeister moves of type II or III.
-			\item $w(D)$ does change by $+1$ or $-1$ if $D$ is changed under a Reidemeister move of type I or I'.
+			\item $w(D)$ does not change if $D$ is changed under Reidemeister moves of Type II or III.
+			\item $w(D)$ does change by $+1$ or $-1$ if $D$ is changed under a Reidemeister move of Type I.
 			\item The writhe of a knot diagram does \emph{not} depend on the choice of orientation.
 		\end{itemize}
 	\end{block}
@@ -520,14 +520,14 @@
 		\left\langle \raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/trifoilrightkaff.png}} \right\rangle & = A\left\langle \raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/trifoilrightkaff1.png}} \right\rangle +A^{-1} \left\langle \raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/trifoilrightkaff2.png}} \right\rangle \\
 		                                                                                                     & = A(-A^4-A^{-4})+A^{-1} (-A^{-3})^2 =A^{-7}-A^{-3}-A^{5}                                                                                                                                                               \\
 		w(\raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/righttrefoil.png}})                             & =3                                                                                                                                                                                                                     \\
-		V(\raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/righttrefoil.png}})                             & = \left(-A^{16}+A^{12}+A^4\right)_{t^{1/2}=A^{-2}} = -t^{-4}+t^{-3}+t^{-1}
+		V(\raisebox{-20pt}{\includegraphics[width=1.8cm]{pic/righttrefoil.png}})                             & = \left(-A^{-16}+A^{-12}+A^{-4}\right)_{t^{1/2}=A^{-2}} = -t^{4}+t^{3}+t^{1}
 	\end{align*}
 
 
 \end{frame}
 
-\begin{frame}[c]
-	\frametitle{Mirrow Image}
+\begin{frame}
+	\frametitle{Mirror Image}
 
 	\begin{block}{Mirror Image}
 		Put a mirror aside a knot and the image of the knot is known as the mirror image of the knot, or mathematically, the knot obtained by a refection in a plane.
@@ -540,7 +540,7 @@
 
 \end{frame}
 
-\begin{frame}[c]
+\begin{frame}
 	\frametitle{Properties of Jones Polynomials}
 	\begin{theorem}
 		The Jones polynomial of the mirror image $\bar L$ of an oriented link $L$ is the conjugate under $t\leftrightarrow t^{-1}$ of the polynomial of $L$.
@@ -580,7 +580,7 @@
 	\end{figure}
 \end{frame}
 
-\begin{frame}[c]
+\begin{frame}
 	\frametitle{Properties of Jones Polynomials}
 	\begin{theorem}
 		Let $K_1, K_2$ be two (oriented) knots. Then we have \[V(K_1\# K_2)=V(K_1)V(K_2).\]
@@ -597,7 +597,7 @@
 \end{frame}
 
 
-\begin{frame}[c]
+\begin{frame}
 	\frametitle{Yet Another Approach}
 
 	\begin{block}{Definiton-Theorem}
@@ -649,16 +649,16 @@
 
 \begin{frame}[c]
 	\frametitle{Yet Another Approach}
-	\begin{block}{Observation}
-		Given a knot diagram, if you change all $\KPB$ to either $\KPC$ or $\KPD$, then you arrive at an unlink.
-	\end{block}
+	% \begin{block}{Observation}
+	% 	Given a knot diagram, if you change all $\KPB$ to either $\KPC$ or $\KPD$, then you arrive at an unlink.
+	% \end{block}
 	\begin{itemize}
 		\item 	Label crossings in a knot diagram $D$ as $1,\dots,n$.
 		\item A \emph{state} for $D$ is a function $s:\{1,\dots,n\}\to\{+1,-1\}$.
 		\item There are $2^n$ states.
 		\item Let $sD$ be the diagram by replacing each crossings according to \[\KPD \xleftarrow{\ \text{ if }s(i)=-1\ } \KPB \xrightarrow{\ \text{ if }s(i)=+1\ }  \KPC\]
-		      for the $i^\text{th}$ crossing.
-		\item $|sD| =$ number of complements in the unlink $sD$
+		      for the $i^\text{th}$ crossing. Note that $sD$ is then an unlink.
+		\item $|sD| =$ number of complements in the unlink $sD$.
 
 	\end{itemize}
 \end{frame}
@@ -689,7 +689,7 @@
 
 \end{frame}
 
-\begin{frame}[c]
+\begin{frame}
 	\frametitle{Open Problem}
 
 	Facts:
@@ -706,7 +706,7 @@
 \end{frame}
 
 
-\begin{frame}[c]
+\begin{frame}
 	\frametitle{Coloured Jones Polynomials}
 
 	None of the three methods discussed in this talk was Jones' original approach, where his formulation of the polynomial came from his study of operator algebras. His work is generalized to vast families of invariants, called quantum invariants.
@@ -719,7 +719,7 @@
 
 \end{frame}
 
-\begin{frame}[c]
+\begin{frame}
 	\frametitle{Coloured Jones Polynomials}
 
 	Fot this talk:
@@ -740,8 +740,8 @@
 
 \end{frame}
 
-\begin{frame}[c]
-	\frametitle{Conjectures}
+\begin{frame}
+	\frametitle{Conjecture}
 
 	\begin{block}{Volume Conjecture}
 		Let $K$ be a hyperbolic knot. Then \[\vol(K)=\lim_{N\to\infty}\frac{2\pi \log |\langle K\rangle_N |}{N},\] where \[\langle K\rangle_N=\lim_{q\to e^{2\pi i/N}} \frac{J_{K,N} (q)}{J_{\mbox{unknot},N}(q)}.\]
