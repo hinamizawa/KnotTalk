@@ -242,16 +242,11 @@
 
 \begin{frame}
 	\frametitle{Reidemeister Moves}
-	\begin{center}
-		\begin{minipage}{0.5\textwidth}
-			\begin{enumerate}[I.]
-				\item \RIa\myarrow\RIb
-				\item \RIIa\myarrow\RIIb
-				\item \RIIIa\myarrow\RIIIa[rotate=180]
-			\end{enumerate}
-		\end{minipage}
-	\end{center}
-
+	\begin{enumerate}[I.]
+		\item \RIa\myarrow\RIb\myarrow\RIa[yscale=-1]
+		\item \RIIa\myarrow\RIIb\myarrow\RIIc
+		\item \RIIIa\myarrow\RIIIa[rotate=180];\qquad\RIIIa[xscale=-1]\myarrow\RIIIa[xscale=-1, rotate=180]
+	\end{enumerate}
 	\vspace{0.4cm}
 
 	\begin{figure}
