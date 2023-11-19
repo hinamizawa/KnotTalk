@@ -75,6 +75,12 @@
   \filldraw[color=gray, fill=none, thick] (0.7,0) circle (0.3);}%
 }
 
+\newcommand{\KPUNLINKT}{%
+  \KP{\filldraw[color=gray, fill=none, thick] circle (0.3);
+  \filldraw[color=gray, fill=none, thick] (0.7,0) circle (0.3);
+  \filldraw[color=gray, fill=none, thick] (1.4,0) circle (0.3);}%
+}
+
 \newcommand{\KPB}{%
   \KP{
  \draw[color=gray,thick] (-0.3,0.3) -- (0.3,-0.3);
@@ -140,10 +146,25 @@
 		Link = A p.l. (or smooth) embedding of disjoint circles into $\RR^3$ or $S^3$
 	\end{center}
 	\p
+	\vspace{0.4cm}
+	\begin{figure}
+		\centering
+		\includegraphics[width=7cm]{pic/knowfromstring.png}
+		\caption{Knot as a string with two ends spliced together}
+	\end{figure}
+\end{frame}
+
+\begin{frame}[t]
+	\frametitle{Definitions}
+	\begin{center}
+		Knot = A piece-wise linear (or smooth) embedding of $S^1$ into $\RR^3$ or $S^3$\\
+		\vspace{0.1in}
+		Link = A p.l. (or smooth) embedding of disjoint circles into $\RR^3$ or $S^3$
+	\end{center}
 	\begin{figure}
 		\centering
 		\includegraphics[width=6cm]{pic/kelvin_knots.jpg}
-		\caption{Illustrations of knots and links, including a trefoil knot, top left, in an 1869 paper by Lord Kelvin on his knotted vortex theory of atoms.}
+		\caption{Illustrations of knots and links, including a trefoil knot, top left, in an 1869 paper by Lord Kelvin on his knotted vortex theory of atoms}
 	\end{figure}
 \end{frame}
 
@@ -388,8 +409,11 @@
 	\vspace{0.2cm}
 	An easy calculation with the unlink:
 	\begin{align*}
-		\left\langle\KPUNLINK\right\rangle & = (-A^{2}-A^{-2})\left\langle\KPA\right\rangle \\
-		                                   & =-A^2-A^{-2}
+		\left\langle\KPUNLINK\right\rangle  & = (-A^{2}-A^{-2})\left\langle\KPA\right\rangle      \\
+		                                    & =-A^2-A^{-2};                                       \\
+		                                    &                                                     \\
+		\left\langle\KPUNLINKT\right\rangle & = (-A^{2}-A^{-2})\left\langle\KPUNLINK\right\rangle \\
+		                                    & =(-A^2-A^{-2})^2
 	\end{align*}
 
 
