@@ -248,7 +248,7 @@
 		\item \RIIIa\myarrow\RIIIa[rotate=180];\qquad\RIIIa[xscale=-1]\myarrow\RIIIa[xscale=-1, rotate=180]
 	\end{enumerate}
 	\vspace{0.4cm}
-
+	\p
 	\begin{figure}
 		\centering
 		\includegraphics[width=10.5cm]{pic/rmseq.png}
@@ -267,8 +267,8 @@
 	\p
 	{\small{\begin{itemize}
 				\item Both problems are NP.
-				\item $n=$ the sum of crossing numbers of two diagrams; an upper bound on the number of Reidemeister moves is $2^{2^{2^{\dots^n}}}$, where where the height of the tower of $2$s is $10^{1,000,000n}$ (Coward \& Lackenby 2014).
-				\item $c=$ the sum of crossing numbers of an unknot diagram; an upper bound on the number of Reidemeister moves required to arrive at the standard unknot is $(236c)^{11}$ (Lackenby 2015).
+				\item $n=$ the sum of crossing numbers of two diagrams; an upper bound on the number of Reidemeister moves is $2^{2^{2^{\dots^n}}}$, where where the height of the tower of $2$s is $10^{1,000,000n}$ (Coward \& Lackenby 2010).
+				\item $c=$ numbers of crossing in an unknot diagram; an upper bound on the number of Reidemeister moves required to arrive at the standard unknot is $(236c)^{11}$ (Lackenby 2015).
 			\end{itemize}}}
 \end{frame}
 
@@ -299,7 +299,6 @@
 		{Regular neighbourhood:} & $n(K)$                \\
 		{Knot complement:}       & $\overline{S^3-n(K)}$
 	\end{tabular}
-	\vspace{0.3cm}
 	\[K_1=K_2 \quad\Longrightarrow\quad \overline{S^3-n(K_1)}=\overline{S^3-n(K_2)} \]
 
 	\begin{center}
@@ -441,6 +440,7 @@
 		                                                                                        & =A\cdot 1 + A^{-1}(-A^2-A^{-2})                                                                                                                                                                \\
 		                                                                                        & = -A^{-3}
 	\end{align*}
+	\p
 	\vspace{-0.4cm}
 	\begin{block}{Good News}
 		The Kauffman bracket respects Reidemeister moves of Type II and III.
@@ -449,7 +449,7 @@
 	\begin{block}{Bad News}
 		The Kauffman bracket does \alert{not} respect Reidemeister moves of Type I.
 	\end{block}
-	Indeed, Type I gives an extra $-A^3$ factor and Type I' $-A^{-3}$.
+	Indeed, a move of Type I gives an extra $-A^3$ (or $-A^{-3}$) factor.
 	% {\small
 	% \hspace*{-1cm}
 	% \begin{tabular}{ l l }
@@ -718,7 +718,7 @@
 	\end{itemize}
 
 	\begin{block}{Conjecture}
-		The only knot with Jones polynomial $V(K)=1$ is the unknot.
+		The only knot with the Jones polynomial $V(K)=1$ is the unknot.
 	\end{block}
 
 	The conjecture has been confirmed for several families of knots, including alternating knots and knots up to 23 crossings (as of 2019).
@@ -754,7 +754,7 @@
 		\includegraphics[width=2cm]{pic/fig8.png}
 		\hspace{0.5cm}
 		\includegraphics[width=2cm]{pic/fig83.png}
-		\caption{Figure-8 knot and its parallels}
+		\caption{The figure-8 knot and its parallels}
 	\end{figure}
 
 \end{frame}
